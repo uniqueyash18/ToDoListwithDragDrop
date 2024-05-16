@@ -1,0 +1,97 @@
+@font-face {
+	font-family: 'Roboto-Regular';
+	src: url('../fonts/Roboto-Regular.eot');
+	src: local('☺'), url('../fonts/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto-Regular.ttf') format('truetype'), url('../fonts/Roboto-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('../fonts/fontawesome-webfont.eot');
+	src: local('☺'), url('../fonts/fontawesome-webfont.woff') format('woff'), url('../fonts/fontawesome-webfont.ttf') format('truetype'), url('../fonts/fontawesome-webfont.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+body{font-family: 'Roboto-Regular';
+    background: #70aa26;
+color: #fff;
+text-align: center;
+/* background-image: url(); */
+}
+@keyframes animate{
+    0%{transform: scale(0.95);}
+    50%{transform: scale(1);}
+    100%{transform: scale(0.95);}
+}
+
+.logo{
+    animation: animate 4s;
+    animation-iteration-count: infinite;
+    width: 14%;
+    float: left;
+    margin: 1%;
+    background-color:#0d0b0bb8;
+}
+
+section.todo-outer {
+    width: 100%;
+    float: left;
+    padding: 30px 0;
+}
+section.todo-outer h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.todo-inner {
+    width: 100%;
+    float: left;
+    padding: 40px;
+    box-shadow: 10px 2px 30px black;
+    background: #fff;
+}
+table tr td button {
+    background: no-repeat;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+.completed{text-decoration: line-through;}
+
+#addtaskbtn{
+    margin-left: 1%;
+}
+#addtaskinput{
+    float: left;
+}
+td{
+    word-break: break-word;
+}
+
+#start:hover {
+    width: 80%;
+background-color: #70aa26;
+}
+#pause:hover{
+    width: 80%;
+    background-color: rgb(134, 134, 59);
+}
+#complete:hover{
+    width: 85%;
+    background-color:rgb(230, 183, 183)
+}
+
+
+
+
+   td,tr,th{
+    border-collapse: collapse;
+    cursor:all-scroll;
+   }
+   table{
+    border-collapse: collapse;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10+ and Edge */
+    user-select: none; /* Standard syntax */
+    margin:0 auto;
+   }
