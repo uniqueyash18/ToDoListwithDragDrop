@@ -3,10 +3,13 @@ let addtaskinput = document.getElementById("addtaskinput");
 let addtaskbtn = document.getElementById("addtaskbtn");
 addtaskbtn.addEventListener("click", function () {
     addtaskinputval = addtaskinput.value;
+    console.log(addtaskinputval,'addtaskinputval')
     if (addtaskinputval.trim() != 0) {
         let myTask = localStorage.getItem("localtask");
         taskObj = [];
-        taskObj = JSON.parse(myTask);
+        if(!!myTask){
+            taskObj = JSON.parse(myTask);
+        }
         taskObj.push({ 'task_name': addtaskinputval, 'status': "Not Started" });
 
         localStorage.setItem("localtask", JSON.stringify(taskObj));
@@ -19,7 +22,9 @@ addtaskbtn.addEventListener("click", function () {
 function showtask() {
     let myTask = localStorage.getItem("localtask");
     taskObj = [];
-    taskObj = JSON.parse(myTask);
+    if(!!myTask){
+        taskObj = JSON.parse(myTask);
+    }
     let html = '';
 
     let addedtasklist = document.getElementById("addedtasklist");

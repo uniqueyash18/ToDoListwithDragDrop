@@ -11,47 +11,50 @@
 </head>
 
 <body>
-  <img src="codebrew-white-logo.svg" alt="" style="width: 200px; background-color: rgba(0, 0, 0, 0.411);border-radius: 10px; float: left !important;">
-  
+  <img src="codebrew-white-logo.svg" alt="Codebrew Logo" class="logo">
+
   <section class="todo-outer">
     <div class="container">
       <div class="row justify-content-md-center">
         <div class="col-sm-12 col-md-8 mt-5">
           <h1>To-Do List Task</h1>
-          <h4 id="date"> </h4>
+          <h4 id="date"></h4>
           <div class="todo-inner">
-            <div class="form-row">
-              <div class="col-8 mr-sm-2">
+            <div class="form-row row g-2">
+              <div class="col-12 col-md-7">
                 <input type="text" class="form-control" placeholder="Enter your task" id="addtaskinput" />
                 <input type="hidden" id="saveindex">
               </div>
-              <button type="button" class="btn btn-success mr-sm-2" id="addtaskbtn">
-                Add Task
-              </button>
-              <button type="button" id="deleteallbtn" class="btn btn-danger">
-                Delete All
-              </button>
+              <div class="col-6 col-md-2">
+                <button type="button" class="btn btn-success w-100" id="addtaskbtn">Add Task</button>
+              </div>
+              <div class="col-6 col-md-3">
+                <button type="button" id="deleteallbtn" class="btn btn-danger w-100">Delete All</button>
+              </div>
             </div>
             <div class="to-do-output">
-              <table class="table  mt-3 mb-0" >
-                <tr ><th >Sr No</th><th >Task Name</th ><th >Status</th><th >Start</th><th >Pause</th><th >Complete</th><th >Delete</th></tr>
-                <tbody  class="table  mt-3 mb-0" id="addedtasklist">
-
-                </tbody>
-
+              <table class="table mt-3 mb-0">
+                <thead>
+                  <tr>
+                    <th>Sr No</th>
+                    <th>Task Name</th>
+                    <th>Status</th>
+                    <th>Start</th>
+                    <th>Pause</th>
+                    <th>Complete</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead>
+                <tbody id="addedtasklist"></tbody>
               </table>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </section>
 
   <script src="todonew.js"></script>
-
-
-
 </body>
 
 </html>

@@ -1,6 +1,5 @@
 body {
     font-family: 'Roboto-Regular';
-    /* background: #70aa26; */
     color: black;
     text-align: center;
     background-image: url(img2.jpg);
@@ -8,13 +7,12 @@ body {
 }
 
 .todo-inner {
-
     width: 100%;
-    float: left;
     padding: 40px;
     box-shadow: 10px 2px 30px black;
     background: black;
     border: #70aa26 2px solid;
+    margin-top: 20px;
 }
 
 table tr td button {
@@ -30,7 +28,7 @@ table tr td button {
 }
 
 #addtaskinput {
-    float: left;
+    width: 100%;
 }
 
 td {
@@ -55,24 +53,14 @@ td {
 td,
 tr,
 th {
-    /* border-collapse: collapse; */
     cursor: all-scroll;
     color: #fff;
 }
 
 table {
-    /* border-collapse: collapse; */
-    /* -webkit-user-select: none; */
-    /* Safari */
-    /* -ms-user-select: none; */
-    /* IE 10+ and Edge */
-    /* user-select: none; */
-    /* Standard syntax */
     margin: 0 auto;
     color: #fff;
-
 }
-
 
 #tpause {
     visibility: hidden;
@@ -81,6 +69,59 @@ table {
 #tcomplete {
     visibility: hidden;
 }
-tr td th{
+
+tr td th {
     color: #fff;
+}
+
+.logo {
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.2);
+    float: left;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+    .todo-inner {
+        padding: 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-row .col-12, .form-row .col-6 {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    .todo-inner {
+        padding: 10px;
+    }
+
+    table, th, td {
+        font-size: 12px;
+    }
+
+    .logo {
+        width: 100px;
+        float: none;
+        display: block;
+        margin: 0 auto 10px;
+    }
 }
